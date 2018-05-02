@@ -5,7 +5,7 @@ defmodule FishingSpot.LocationTrip do
 
   schema "locations_trips" do
     timestamps()
-    belongs_to :location, Location
-    belongs_to :trip,     Trip
+    belongs_to(:location, Location)
+    belongs_to(:trip, Trip)
   end
 end

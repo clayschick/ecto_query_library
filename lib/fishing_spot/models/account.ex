@@ -4,8 +4,8 @@ defmodule FishingSpot.Account do
 
   schema "accounts" do
     timestamps()
-    field :identifier, :string
-    field :name,       :string
+    field(:identifier, :string)
+    field(:name, :string)
   end
 
   def changeset(model, params \\ :empty) do

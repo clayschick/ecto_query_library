@@ -1,3 +1,33 @@
+# Running the app
+
+Start up a docker container running postgres.
+
+```
+$ docker run --name test-postgres -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+$ mix ecto.rebuild
+```
+
+Should you need or want to access the container you can exec into it and run bash. Once on the container console you can `su postgres` and run create and drop scripts or launch psql and run queries or look at stuff.
+
+```
+docker exec -it test-postgres /bin/bash
+```
+
+Once the container is up and running use the custom mix task, ecto.rebuild, to setup the persistance space.
+
+The ecto.rebuild task is an alias in mix.exs that will create the db and tables as well as populate the seed data.
+
+```
+mix ecto.rebuild
+```
+
+Now you can create tests and use them as a runner for your playground or run the app using `iex -S mix` and run your module functions from the console.
+
+---
+
+## Original README:
+
 This is basically the TL;DR for my Diving into Ecto series. I always hate having to skim a long blog post looking for a quick answer, and I know you do too. With that in mind I'm going to make this post a list of common and not so common queries you can do with Ecto. I will keep it up-to-date as I discover more interesting queries and ways of using Ecto.
 
 The repo with this post reproduced in the README can be found at [https://github.com/parkerl/ecto_query_library](https://github.com/parkerl/ecto_query_library). The queries below can be found in a usable form in `lib/fishing_spot/queries.ex`. If you find something incorrect please open a pull request. I would like to make this a community resource rather than my personal toolbox.
@@ -7,9 +37,9 @@ For the full story behind this project and the queries start here [Diving into E
 # Versions
 _The query library is currently built using the following setup._
 
- - Elixir 1.4
- - Ecto 2.1
- - Postgres 9.4
+ - Elixir 1.6
+ - Ecto 2.2.10
+ - Postgres 10.3
 
 # Table of Contents
 

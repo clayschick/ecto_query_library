@@ -3,6 +3,6 @@ defmodule FishingSpot.FishSpecies do
 
   schema "fish_species" do
     timestamps()
-    field :name
+    field(:name)
   end
 end

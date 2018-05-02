@@ -1,10 +1,10 @@
-dist/app-5b9e160cec.css
-dist/app-da04b39d0c.js
+dist/app-480ffdc169.css
+dist/app-9bd040e5e5.js
 fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-6b1d499fdf.js
+dist/sidebar_items-894b3f90a5.js
 api-reference.html
 search.html
 404.html
@@ -20,6 +20,5 @@ FishingSpot.LocationTrip.html
 FishingSpot.LocationType.html
 FishingSpot.Queries.html
 FishingSpot.Repo.html
-FishingSpot.Test.html
 FishingSpot.Trip.html
 index.html

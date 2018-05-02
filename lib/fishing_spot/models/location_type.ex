@@ -3,6 +3,6 @@ defmodule FishingSpot.LocationType do
 
   schema "location_types" do
     timestamps()
-    field :name
+    field(:name)
   end
 end

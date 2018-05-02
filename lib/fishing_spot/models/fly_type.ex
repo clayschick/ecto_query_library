@@ -3,6 +3,6 @@ defmodule FishingSpot.FlyType do
 
   schema "fly_types" do
     timestamps()
-    field :name
+    field(:name)
   end
 end

@@ -5,16 +5,16 @@ defmodule FishingSpot.Location do
 
   schema "locations" do
     timestamps()
-    field :name
-    field :altitude,  :integer
-    field :lat,       :decimal
-    field :long,      :decimal
+    field(:name)
+    field(:altitude, :integer)
+    field(:lat, :decimal)
+    field(:long, :decimal)
 
-    belongs_to :location_type, LocationType
+    belongs_to(:location_type, LocationType)
   end
 
-   def changeset(model, params \\ :empty) do
-     model
-       |> cast(params, ~w(name))
-   end
+  def changeset(model, params \\ :empty) do
+    model
+    |> cast(params, ~w(name))
+  end
 end
