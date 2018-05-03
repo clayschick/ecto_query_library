@@ -4,8 +4,6 @@ Start up a docker container running postgres.
 
 ```
 $ docker run --name test-postgres -p 127.0.0.1:5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-
-$ mix ecto.rebuild
 ```
 
 Should you need or want to access the container you can exec into it and run bash. Once on the container console you can `su postgres` and run create and drop scripts or launch psql and run queries or look at stuff.

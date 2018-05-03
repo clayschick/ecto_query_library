@@ -7,7 +7,7 @@ defmodule FishingSpot do
     import Supervisor.Spec, warn: false
 
     children = [
-      worker(FishingSpot.Repo, [])
+      FishingSpot.Repo
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
